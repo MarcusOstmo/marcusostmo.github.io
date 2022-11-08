@@ -1,4 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
+import preprocess from 'svelte-preprocess';
 
 const dev = "production" === "development";
 
@@ -11,8 +12,14 @@ const config = {
 		}),
 		paths: {
 			base: dev ? "" : "/marcusostmo.github.io"
+			// base: ""
 		},
-	}
+	},
+	preprocess: [
+		preprocess({
+			postcss: true,
+		}),
+	],
 };
 
 export default config;
