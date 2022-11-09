@@ -5,4 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  purge: [
+    './src/**/*.html',
+    './src/**/*.js',
+    './src/**/*.svelte'],
 }
